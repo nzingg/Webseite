@@ -1,12 +1,12 @@
 body {
   font-family: "Franklin Gothic Medium", Arial;
-  font-size: 18px; /* als Basis nehmen */
+  font-size: 18px;
   line-height: 1.5;
 }
 button,
 input,
 textarea {
-  font-family: inherit; /* damit diese auch die Schriftart vom body übernehmen */
+  font-family: inherit;
 }
 .layout {
   display: flex;
@@ -16,14 +16,16 @@ textarea {
 }
 div,
 p {
-  font-size: 1rem; /* gleich wie bei Body definiert */
+  font-size: 1rem;
 }
 .container {
-  border: 1px solid black;
-  width: 90%; /* Damit bei Handys beim Rand nicht zu viel Platz gibt */
+  width: 90%;
   max-width: 55.5rem;
-  margin: 0 auto; /* Damit es in der Mitte zentriert ist */
+  margin: 0 auto;
   box-sizing: border-box;
+}
+.container h1 {
+  padding-bottom: 2rem;
 }
 h1 {
   font-size: 2rem;
@@ -32,14 +34,12 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
-
 figcaption {
   font-size: 1rem;
 }
 figure {
-  margin: 0; /* Damit es von figure keinen automatischen Abstand gibt beim Bild rechts */
+  margin: 0;
 }
-
 .menu {
   background-color: #b1decb;
 }
@@ -51,16 +51,15 @@ nav ul {
   padding-bottom: 9rem;
   justify-content: flex-start;
   gap: 2rem;
-  padding-left: 0; /* Damit Menü links angeordnet ist */
+  padding-left: 0;
 }
 nav ul li {
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem /* 10px */;
+  padding-bottom: 0.5rem;
   margin-bottom: 0rem;
 }
 nav ul li a {
   text-decoration: none;
-  font-family: "Franklin Gothic Medium", Arial;
   color: black;
 }
 .button {
@@ -72,20 +71,19 @@ nav ul li a {
 footer {
   background-color: #ceeade;
   height: 11rem;
-  align-content: center; /* Dass Icons und Text in der Mitte vom Footer sind */
+  align-content: center;
 }
-
 footer ul {
   display: flex;
   list-style: none;
   padding-top: 0.5rem;
-  align-items: center; /* damit die Icons und der Text auf gleicher Linie sind */
-  justify-content: center; /* um mittig anzuordnen */
+  align-items: center;
+  justify-content: center;
 }
 footer ul li {
-  padding: 10px;
+  padding: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   margin-right: 0.1rem;
   margin-left: 0.1rem;
 }
@@ -110,37 +108,25 @@ footer ul li {
   width: 100%;
   max-width: 22.2rem;
 }
-
-.witze img {
-  width: 100%;
-  display: block;
-  height: auto;
-}
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 1.5rem;
-  border: 1px solid black;
 }
 .content1 {
   order: 1;
   margin-bottom: 1rem;
   margin-top: 2.7rem;
 }
-/* .content2 {
-  order: 2;
-} */
 .text {
   margin-top: 3.8rem;
 }
-
 .uebermichBlock {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
 }
-
 .uebermichBilder {
   max-width: 13.8rem;
   justify-self: end;
@@ -149,7 +135,6 @@ footer ul li {
   width: 100%;
   height: auto;
 }
-
 .uebermichSchulbildung {
   display: flex;
   gap: 2.2rem;
@@ -160,39 +145,35 @@ footer ul li {
   gap: 0.5rem;
 }
 .uebermichBeruf img {
-  margin-left: auto; /* damit es rechts angeordnet ist */
+  margin-left: auto;
   width: 100%;
   max-width: 14rem;
-  height: min-content; /* dass das Bild nicht in die Höhe verzerrt ist */
+  height: min-content;
 }
-
-/* Fähigkeiten */
 .video {
   display: flex;
   justify-content: center;
   margin-top: 4.5rem;
 }
-
 .video iframe {
   width: 100%;
   max-width: 50rem;
   aspect-ratio: 16 / 9;
   height: auto;
 }
-
-/* Portfolio */
 .portfolioProjekte {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 3.8rem;
 }
-
 .portfolio-img {
   display: flex;
   flex-direction: column;
   justify-self: right;
 }
-
+.portfolio-img img {
+  max-width: 23.3rem;
+}
 .kontaktformular {
   background-color: rgb(221, 217, 217);
   width: 100%;
@@ -234,7 +215,6 @@ button:hover {
   background-color: #b1decb;
 }
 .kontakt-seite {
-  /* Dass die ganzen Elemente auf der Seite Kontakt unteinander und zentriert sind */
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -243,29 +223,37 @@ button:hover {
 /* Media Queries */
 
 @media (max-width: 768px) {
-  /* für Tablets nur noch eine Spalte machen */
-
   .layout {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
     margin-bottom: 3rem;
   }
+  nav ul {
+    padding-left: 1rem;
+  }
+  .menu {
+    padding-left: 1rem;
+  }
   .container {
     width: 100%;
   }
   .witze {
-    grid-template-columns: 1fr;
-  }
-  .content {
+    display: flex;
     flex-direction: column;
+    margin: 0;
+    gap: 1rem;
+    justify-self: center;
+  }
+  .witze img {
+    width: 100%;
+    max-width: 15rem;
   }
   .content img {
-    width: 100%;
-    max-width: 12rem;
-    height: auto;
+    max-width: 8rem;
+    margin-left: auto;
   }
-  .uebermichBlock {
+  .content {
     flex-direction: column;
   }
   .portfolioProjekte {
@@ -281,7 +269,6 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-  /* für Handys nur noch eine Spalte machen */
   .layout {
     display: flex;
     flex-direction: column;
@@ -291,9 +278,11 @@ button:hover {
   nav ul {
     flex-direction: column;
     gap: 1rem;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+    padding: 0;
     align-items: flex-start;
+  }
+  nav ul li {
+    padding: 0;
   }
   .menu {
     width: 100%;
@@ -310,16 +299,9 @@ button:hover {
   .container {
     width: 100%;
   }
-  /*   .content2 img {
-    width: 100%;
-    max-width: 6rem;
-    height: auto;
-  } */
   .content img {
-    order: 2;
-    width: 100%;
     max-width: 8rem;
-    height: auto;
+    margin-left: auto;
   }
   .witze {
     display: flex;
@@ -331,12 +313,6 @@ button:hover {
   .witze img {
     width: 100%;
     max-width: 10rem;
-  }
-
-  .witze img {
-    width: 100%;
-    display: block;
-    height: auto;
   }
   .uebermichBlock {
     display: flex;
@@ -365,7 +341,7 @@ button:hover {
     gap: 2rem;
   }
   .portfolio-img {
-    display: block; /* normale Standardanzeige dass es kein flex mehr ist */
+    display: block;
   }
   .portfolio-img img {
     width: 100%;
@@ -374,18 +350,9 @@ button:hover {
     display: block;
   }
   .portfolioProjekte > div:empty {
-    display: none; /* damit man das leere div nicht mehr sieht */
+    display: none;
   }
   .kontaktformular {
     padding: 1rem;
-  }
-}
-@media (max-width: 2000px) {
-  .container {
-    border: 1px solid black;
-    width: 90%;
-    max-width: 100rem; /* damit der Schreibbereich nicht so gross ist  bei grösseren Bildschirmen */
-    margin: 0 auto; /* Damit es in der Mitte zentriert ist */
-    box-sizing: border-box;
   }
 }
