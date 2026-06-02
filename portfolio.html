@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="container">
+        <ul>
+          <li><a href="startseite.html">Home</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="faehigkeiten.html">Fähigkeiten</a></li>
+          <li><b>Portfolio</b></li>
+          <li><a href="kontakt.html" class="button">Kontakt</a></li>
+        </ul>
+        <h1>Portfolio</h1>
+      </div>
+    </nav>
+    <div class="layout">
+      <div class="container">
+        <div class="portfolioProjekte">
+          <div class="statischeCodeanalyse">
+            <h2>Projekt: Statische Codeanalyse</h2>
+            <p>
+              Das ist ein Tool, das kontrolliert, ob bestimmte Regeln
+              eingehalten werden. Es kontrolliert die Codequalität und schaut,
+              dass der Code ein einheitlicher Stil hat.
+            </p>
+
+            <p>
+              Das, was als Fehler angezeigt wurde, habe ich dann im Code
+              verbessert. Dabei habe ich gelernt die Warnungen der Codeanalyse
+              zu verstehen <br />und auch den C-Code besser zu verstehen.
+            </p>
+          </div>
+
+          <div class="portfolio-img">
+            <figure>
+              <img
+                src="img/statische_codeanalyse.jpg"
+                alt="Statische Codeanalyse"
+              />
+              <figcaption>Statische Codeanalyse</figcaption>
+            </figure>
+          </div>
+
+          <div class="miniHIL">
+            <h2>Projekt: Mini-HIL</h2>
+            <p>
+              In meinem Betrieb arbeiten wir viel mit Mikrocontrollern. Um einen
+              solchen zu testen, haben wir einen Mini-HIL programmiert. HIL
+              steht für "Hardware-In-The-Loop" und bedeutet, dass die Hardware
+              mit einem Gerät so getestet wird, als wäre sie bereits in einem
+              Fahrzeug. Das Backend haben wir mit Rust programmiert und das
+              Frontend mit HTML, CSS und JavaScript. Dabei habe ich viel über
+              die Verknüpfung von Backend und Frontend gelernt.
+            </p>
+
+            <p>
+              Diesen Mini HIL haben wir programmiert, da es normalerweise
+              grössere HILs gibt aber diese teuer sind und viel Ausstattung
+              benötigen. Mit einem kleinen HIL ist es einfacher, das
+              einzurichten. Dabei können Testdaten im Frontend eingegeben
+              werden, die der HIL dann als Signale versendet. So kann man sehen,
+              wie der Mikrocontroller darauf reagiert.
+            </p>
+          </div>
+
+          <div class="portfolio-img">
+            <figure>
+              <img src="img/miniHIL.jpg" alt="Mini HIL" />
+              <figcaption>Mini-HIL</figcaption>
+            </figure>
+          </div>
+
+          <div>
+            <!-- leeres div damit es 3 Reihen ermöglicht für das 3. Bild -->
+          </div>
+
+          <div class="portfolio-img">
+            <figure>
+              <img src="img/miniHIL-frontend.png" alt="Testumgebung" />
+              <figcaption>Frontend</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <ul>
+          <li>
+            <a href="https://wa.me/41767250685"
+              ><img class="icon" src="img\whatsapp.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="mailto:noemi.zingg@edu.gbssg.ch"
+              ><img class="icon" src="img\email.svg"
+            /></a>
+          </li>
+          <li>Finde mich mit WhatsApp oder E-Mail</li>
+          <li>
+            <a href="https://www.instagram.com/brusa_emobility/"
+              ><img class="icon" src="img\instagram.svg"
+            /></a>
+          </li>
+          <li>Mein Betrieb Brusa Hypower</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
