@@ -92,7 +92,8 @@ footer ul li {
 .icon {
   height: 2.2rem;
 }
-.content2 img {
+.content img {
+  order: 2;
   width: 100%;
   max-width: 13.8rem;
   height: auto;
@@ -127,9 +128,9 @@ footer ul li {
   margin-bottom: 1rem;
   margin-top: 2.7rem;
 }
-.content2 {
+/* .content2 {
   order: 2;
-}
+} */
 .text {
   margin-top: 3.8rem;
 }
@@ -244,34 +245,39 @@ button:hover {
 @media (max-width: 768px) {
   /* für Tablets nur noch eine Spalte machen */
 
-    .layout {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-    }
-    .container {
-        width: 100%;
-    }
-    .witze {
-        grid-template-columns: 1fr;
-    }
-    .content {
-        flex-direction: column;
-    }
-    .uebermichBlock {
-        flex-direction: column;
-    }
-        .portfolioProjekte {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .portfolio-img img {
-        width: 100%;
-        max-width: 22rem;
-        height: auto;
-    }
+  .layout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .witze {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .content img {
+    width: 100%;
+    max-width: 12rem;
+    height: auto;
+  }
+  .uebermichBlock {
+    flex-direction: column;
+  }
+  .portfolioProjekte {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .portfolio-img img {
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -304,9 +310,15 @@ button:hover {
   .container {
     width: 100%;
   }
-  .content2 img {
+  /*   .content2 img {
     width: 100%;
     max-width: 6rem;
+    height: auto;
+  } */
+  .content img {
+    order: 2;
+    width: 100%;
+    max-width: 8rem;
     height: auto;
   }
   .witze {
